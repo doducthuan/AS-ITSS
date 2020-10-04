@@ -1,1 +1,1 @@
-# Ph-t-tri-n-ph-n-m-m-theo-chu-n-ITSS
+# Phát triển phần mềm theo chuẩn 
