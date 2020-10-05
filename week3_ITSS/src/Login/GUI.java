@@ -195,7 +195,7 @@ public class GUI extends javax.swing.JFrame {
                 ps.setString(2,password2);
                 ResultSet rs = ps.executeQuery();
                 if(rs.next()){
-                    imformation ifor = new imformation();
+                    new_imformation ifor = new new_imformation();
                     ifor.setVisible(true);
                 }else{
                     JOptionPane.showMessageDialog(rootPane,"Dang nhap that bai");
