@@ -41,7 +41,7 @@ public class new_imformation extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Exit");
+        jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -77,7 +77,7 @@ public class new_imformation extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -85,7 +85,7 @@ public class new_imformation extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addContainerGap(273, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -115,8 +115,8 @@ public class new_imformation extends javax.swing.JFrame {
             String password = "root";
             conn = DriverManager.getConnection(dbURL, username, password);
         // Câu lệnh xem dữ liệu
-            String sql = "select * from imformation ";
-        // Tạo đối tượng thực thi câu lệnh Select
+            String sql = "select * from imformation";
+        // Tạo đối tượng thực thi câu lệnh Selectaccount
             st = (Statement) conn.createStatement();
         // Thực thi
             rs = st.executeQuery(sql);
@@ -127,13 +127,13 @@ public class new_imformation extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Chưa có thông tin phòng ban!");
                 return;
             }
-        // Trong khi chưa hết dữ liệu
+            // Trong khi chưa hết dữ liệu
             while (rs.next()) {
                 data = new Vector();
                 data.add(rs.getInt("ID"));
                 data.add(rs.getString("Name"));
                 data.add(rs.getString("Interests"));
-         // Thêm một dòng vào table model
+                // Thêm một dòng vào table model
                 tblModel.addRow(data);
             }
             jTable1.setModel(tblModel); // Thêm dữ liệu vào table
