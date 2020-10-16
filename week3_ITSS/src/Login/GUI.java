@@ -48,7 +48,7 @@ public class GUI extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         login = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        sing_up = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -122,10 +122,10 @@ public class GUI extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("LOGIN");
 
-        jButton1.setText("Sign up");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        sing_up.setText("Sign up");
+        sing_up.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                sing_upActionPerformed(evt);
             }
         });
 
@@ -148,7 +148,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(password, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                                 .addComponent(user))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(sing_up)
                         .addGap(88, 88, 88)
                         .addComponent(login)))
                 .addContainerGap(70, Short.MAX_VALUE))
@@ -169,7 +169,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(login)
-                    .addComponent(jButton1))
+                    .addComponent(sing_up))
                 .addContainerGap(70, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -187,9 +187,9 @@ public class GUI extends javax.swing.JFrame {
         String user2 = user.getText();
         String password2 = String.valueOf(password.getPassword());
         if(user2.equals("")){
-            JOptionPane.showMessageDialog(rootPane,"Nhap username","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Have not entered username yet","Warning",JOptionPane.WARNING_MESSAGE);
         }else if(password2.equals("")){
-            JOptionPane.showMessageDialog(rootPane,"Nhap password","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Have not entered password yet","Warning",JOptionPane.WARNING_MESSAGE);
         }else{
             try{
                 
@@ -207,7 +207,7 @@ public class GUI extends javax.swing.JFrame {
                     this.setVisible(false);
                     ifor.setVisible(true);                                     
                 }else{
-                    JOptionPane.showMessageDialog(rootPane,"Dang nhap that bai");
+                    JOptionPane.showMessageDialog(rootPane,"Account does not exist ! Please register and come back -s2-");
                 }
                 ps.close(); 
                 conn.close();
@@ -217,12 +217,12 @@ public class GUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_loginActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void sing_upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sing_upActionPerformed
         // TODO add your handling code here:
         Sign_up ifor = new Sign_up();
         this.setVisible(false);
         ifor.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_sing_upActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,7 +260,6 @@ public class GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
@@ -272,6 +271,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JButton login;
     private javax.swing.JPasswordField password;
+    private javax.swing.JButton sing_up;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }

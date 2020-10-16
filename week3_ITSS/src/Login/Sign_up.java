@@ -51,7 +51,6 @@ public class Sign_up extends javax.swing.JFrame {
         back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(626, 300));
 
         jLabel5.setIcon(new javax.swing.ImageIcon("/Users/apple/Pictures/tu-vi-12-cung-hoang-dao-ngay-29-6-2020-2_1.png")); // NOI18N
 
@@ -198,11 +197,11 @@ public class Sign_up extends javax.swing.JFrame {
         String pass = String.valueOf(pass_sign.getPassword());
         String confi_pass1 = String.valueOf(confi_pass.getPassword());
         if(user.equals("Admin")==true||user.equals("")==true){
-            JOptionPane.showMessageDialog(rootPane,"Username khong hop le !","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(pass.equals("1234")==true||pass.equals("")==true){
-            JOptionPane.showMessageDialog(rootPane,"Password khong hop le !","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Invalid username !","Warning",JOptionPane.WARNING_MESSAGE);
+        }else if(pass.equals("")==true){
+            JOptionPane.showMessageDialog(rootPane,"You have not entered your password !","Warning",JOptionPane.WARNING_MESSAGE);
         }else if(pass.equals(confi_pass1)==false){
-            JOptionPane.showMessageDialog(rootPane,"Confirm khong hop le !","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"incorrect confirm password !","Warning",JOptionPane.WARNING_MESSAGE);
         }else{
             Connection conn = null;
             Statement st = null;
@@ -212,7 +211,6 @@ public class Sign_up extends javax.swing.JFrame {
                 String dbURL = "jdbc:mysql://localhost:8889/mysql_db";
                 String username = "root";
                 String password = "root";
-                //Class.forName("com.mysql.jdbc.Driver");
                 conn = DriverManager.getConnection(dbURL, username, password);
                 // Câu lệnh xem dữ liệu
                 String sql = "select * from account ";
@@ -226,15 +224,14 @@ public class Sign_up extends javax.swing.JFrame {
                     }                   
                 }
                 if(demo==1){
-                    JOptionPane.showMessageDialog(rootPane,"Tai khoan da toan tai");
-                }else if(demo==0){
-                    JOptionPane.showMessageDialog(rootPane,"Dang ki thanh cong");               
+                    JOptionPane.showMessageDialog(rootPane,"Account already exists","Warning",JOptionPane.WARNING_MESSAGE);
+                }else if(demo==0){          
                     String sql3 = "INSERT INTO account VALUES (?,?)";                   
                     ps = (PreparedStatement) conn.prepareStatement(sql3);
                     ps.setString(1, user);
                     ps.setString(2, pass);
                     ps.executeUpdate();
-                    conn.commit();
+                    JOptionPane.showMessageDialog(rootPane,"Sign Up Success");                    
                 }
                 demo=0;
             } catch (Exception e) {
