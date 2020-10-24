@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1440, 900]"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="image_trung" min="-2" max="-2" attributes="0"/>
+                  <Component id="image_nguyet" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jScrollPane2" pref="400" max="32767" attributes="0"/>
+                  <Component id="jScrollPane3" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="image_thuan" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="image_thuc" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jScrollPane4" pref="400" max="32767" attributes="0"/>
+                  <Component id="jScrollPane5" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="back_about" min="-2" pref="118" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="1330" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="back_about" min="-2" pref="39" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jScrollPane2" max="32767" attributes="0"/>
+                          <Component id="image_trung" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="image_thuan" max="32767" attributes="0"/>
+                          <Component id="jScrollPane4" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="image_thuc" max="32767" attributes="0"/>
+                  <Component id="image_nguyet" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane5" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="image_trung">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;&quot;" type="code"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[200, 200]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel(){&#xa;    ImageIcon icon = new ImageIcon(&quot;image/about_us/trung.jpg&quot;);&#xa;    public void paintComponent(Graphics g){&#xa;        Dimension d = getSize();&#xa;        g.drawImage(icon.getImage(), 0, 0, d.width, d.height, null);&#xa;        setOpaque(false);&#xa;        super.paintComponent(g);&#xa;    }&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="getContentPane().setBackground(Color.white);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="image_thuan">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;&quot;" type="code"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[200, 200]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel(){&#xa;    ImageIcon icon = new ImageIcon(&quot;image/about_us/thuan.jpg&quot;);&#xa;    public void paintComponent(Graphics g){&#xa;        Dimension d = getSize();&#xa;        g.drawImage(icon.getImage(), 0, 0, d.width, d.height, null);&#xa;        setOpaque(false);&#xa;        super.paintComponent(g);&#xa;    }&#xa;}"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="image_nguyet">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;&quot;" type="code"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[200, 200]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel(){&#xa;    ImageIcon icon = new ImageIcon(&quot;image/about_us/nguyet.jpg&quot;);&#xa;    public void paintComponent(Graphics g){&#xa;        Dimension d = getSize();&#xa;        g.drawImage(icon.getImage(), 0, 0, d.width, d.height, null);&#xa;        setOpaque(false);&#xa;        super.paintComponent(g);&#xa;    }&#xa;}"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="image_thuc">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;&quot;" type="code"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[200, 200]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel(){&#xa;    ImageIcon icon = new ImageIcon(&quot;image/about_us/thuc.jpg&quot;);&#xa;    public void paintComponent(Graphics g){&#xa;        Dimension d = getSize();&#xa;        g.drawImage(icon.getImage(), 0, 0, d.width, d.height, null);&#xa;        setOpaque(false);&#xa;        super.paintComponent(g);&#xa;    }&#xa;}"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="back_about">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[80, 30]"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="back_aboutActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="back_about.setBackground(Color.white);"/>
+      </AuxValues>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="imfor_trung">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; t&#xea;n    : L&#xea; Ho&#xe0;ng Anh Trung&#xa;MSSV           : 20176892&#xa;S&#x1edf; th&#xed;ch      : T&#x1b0;&#x1edb;i c&#xe2;y l&#xfa;c tr&#x1edd;i m&#x1b0;a&#xa;Ch&#xe2;m ng&#xf4;n : H&#x1ecd;c - H&#x1ecd;c n&#x1eef;a - H&#x1ecd;c m&#xe3;i&#xa;T&#xec;nh tr&#x1ea1;ng   : FA l&#xe2;u n&#x103;m&#xa;C&#xf4;ng vi&#x1ec7;c    : &#x110;i&#x1ec7;p v&#x1ee5; hai mang t&#x1ea1;i Ph&#xe1;i C&#xe1;i Bang&#xa;                 &#xa;&#xa;                    &quot; &#x110;&#x1eb9;p trai - T&#xe0;i n&#x103;ng - T&#x1b0; duy &#x111;&#x1ec9;nh cao &quot; "/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="imfor_nguyet">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; t&#xea;n       : Ho&#xe0;ng Minh Nguy&#x1ec7;t&#xa;MSSV             : 20176839&#xa;S&#x1edf; th&#xed;ch .       : Nghe nh&#x1ea1;c , &#x111;&#x1ecd;c chuy&#x1ec7;n&#xa;Ch&#xe2;m ng&#xf4;n    : &quot;Self-improvement is not about trying to be &#xa;          someone else.It is to be your own best version&quot;&#xa;T&#xec;nh tr&#x1ea1;ng      : &#x110;&#xe3; c&#xf3; g&#x1ea5;u - Xin gi&#xf3; &#x111;&#xf4;ng h&#xe3;y v&#x1ec1; ....&#xa;C&#xf4;ng vi&#x1ec7;c       : N&#x1ed9;i tr&#x1ee3; &#xa;&#xa;&#xa;                  &quot; Xinh &#x111;&#x1eb9;p - T&#xe0;i n&#x103;ng - Ch&#xe1;u ngoan B&#xe1;c H&#x1ed3; &quot;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="imfor_thuan">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; t&#xea;n       : &#x110;&#x1ed7; &#x110;&#x1ee9;c Thu&#x1ead;n&#xa;MSSV             : 20176884&#xa;S&#x1edf; th&#xed;ch         : B&#xed; m&#x1ead;t&#xa;Ch&#xe2;m ng&#xf4;n    : Kh&#xf4;ng th&#x1ec3; b&#x1ead;t m&#xed; hihi&#xa;T&#xec;nh tr&#x1ea1;ng      : FA&#xa;C&#xf4;ng vi&#x1ec7;c       : L&#xed;nh b&#x1eaf;n t&#x1ec9;a - S&#xe1;t th&#x1ee7;&#xa;&#xa;&#xa;                                         &quot; 12 t&#xed;nh c&#xe1;ch &quot;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea5">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; t&#xea;n         : Mai M&#x1ea1;nh Th&#x1ee5;c&#xa;MSSV                : 20176885&#xa;S&#x1edf; th&#xed;ch           : Love Th&#x1ea3;o nguy&#xea;n&#xa;Ch&#xe2;m ng&#xf4;n      : Ng&#x1ed3;i ch&#x1edd; h&#x1ea1;nh ph&#xfa;c s&#x1ebd; t&#x1edb;i&#xa;T&#xec;nh tr&#x1ea1;ng        : T&#x1b0;&#x1a1;ng t&#x1b0;&#xa;C&#xf4;ng vi&#x1ec7;c         : Th&#xed;ch kh&#xe1;ch &#xa; &#xa;&#xa;                          &quot; Y&#xea;u m&#xe0;u h&#x1b0;&#x1edd;ng gh&#xe9;t s&#x1ef1; gi&#x1ea3; d&#x1ed1;i &quot;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
