@@ -45,13 +45,12 @@ public class home_page extends javax.swing.JFrame {
         name_page = new javax.swing.JLabel();
         leader = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        button_home = new javax.swing.JButton();
-        button_about = new javax.swing.JButton();
-        button_signup = new javax.swing.JButton();
-        button_login = new javax.swing.JButton();
+        login = new javax.swing.JButton();
+        sigup = new javax.swing.JButton();
+        about_us = new javax.swing.JButton();
+        name_home_1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1440, 900));
 
         getContentPane().setBackground( Color.white );
         image_home_page.setText("");
@@ -60,6 +59,7 @@ public class home_page extends javax.swing.JFrame {
         name_page.setText("          ENTITITI Shop");
         name_page.setFont(new Font("Serif", Font.PLAIN, 50));
         name_page.setPreferredSize(new java.awt.Dimension(500, 80));
+        name_page.setRequestFocusEnabled(false);
 
         leader.setText(" .                                 \" Thích thì mua - Không thích cũng phải mua \"");
         leader.setFont(new Font("VARISON", Font.PLAIN, 14));
@@ -68,39 +68,39 @@ public class home_page extends javax.swing.JFrame {
         jLabel1.setText("       - LEADER TRUNG -");
         jLabel1.setPreferredSize(new java.awt.Dimension(250, 40));
 
-        button_home.setText("HOME");
-        button_home.setPreferredSize(new java.awt.Dimension(100, 30));
-        button_home.setBackground(Color.white);
-        button_home.addActionListener(new java.awt.event.ActionListener() {
+        login.setText("LOGIN");
+        login.setPreferredSize(new java.awt.Dimension(150, 40));
+        login.setBackground(Color.white);
+        login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button_homeActionPerformed(evt);
+                loginActionPerformed(evt);
             }
         });
 
-        button_about.setText("ABOUT US");
-        button_about.setPreferredSize(new java.awt.Dimension(100, 30));
-        button_about.setBackground(Color.white);
-        button_about.addActionListener(new java.awt.event.ActionListener() {
+        sigup.setText("SIGN UP");
+        sigup.setPreferredSize(new java.awt.Dimension(150, 40));
+        sigup.setBackground(Color.white);
+        sigup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button_aboutActionPerformed(evt);
+                sigupActionPerformed(evt);
             }
         });
 
-        button_signup.setText("SIGN UP");
-        button_signup.setPreferredSize(new java.awt.Dimension(100, 30));
-        button_signup.setBackground(Color.white);
-        button_signup.addActionListener(new java.awt.event.ActionListener() {
+        about_us.setText("ABOUT US");
+        about_us.setPreferredSize(new java.awt.Dimension(150, 40));
+        about_us.setBackground(Color.white);
+        about_us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button_signupActionPerformed(evt);
+                about_usActionPerformed(evt);
             }
         });
 
-        button_login.setText("LOGIN");
-        button_login.setPreferredSize(new java.awt.Dimension(100, 30));
-        button_login.setBackground(Color.white);
-        button_login.addActionListener(new java.awt.event.ActionListener() {
+        name_home_1.setText("HOME");
+        name_home_1.setPreferredSize(new java.awt.Dimension(150, 40));
+        name_home_1.setBackground(Color.white);
+        name_home_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button_loginActionPerformed(evt);
+                name_home_1ActionPerformed(evt);
             }
         });
 
@@ -109,85 +109,83 @@ public class home_page extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(image_home_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(leader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(80, 80, 80))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(17, 17, 17)
-                            .addComponent(name_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 129, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(300, 300, 300)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(55, 55, 55))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(9, 9, 9)
-                            .addComponent(button_home, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(button_about, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(button_login, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(button_signup, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(15, 15, 15)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addComponent(name_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(300, 300, 300)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(name_home_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)
+                                .addComponent(about_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)
+                                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)
+                                .addComponent(sigup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(image_home_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_home, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_about, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_signup, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_login, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(173, 173, 173)
-                .addComponent(name_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(leader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(image_home_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sigup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(about_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(name_home_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(197, 197, 197)
+                        .addComponent(name_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addComponent(leader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void button_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_signupActionPerformed
+    private void name_home_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_name_home_1ActionPerformed
         // TODO add your handling code here:
-        sign_up sign = new sign_up();
+        home_buy buy = new home_buy();
         this.setVisible(false);
-        sign.setVisible(true);
-    }//GEN-LAST:event_button_signupActionPerformed
+        buy.setVisible(true);
+    }//GEN-LAST:event_name_home_1ActionPerformed
 
-    private void button_aboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_aboutActionPerformed
+    private void about_usActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_about_usActionPerformed
         // TODO add your handling code here:
         about_us about = new about_us();
         this.setVisible(false);
         about.setVisible(true);
-    }//GEN-LAST:event_button_aboutActionPerformed
+    }//GEN-LAST:event_about_usActionPerformed
 
-    private void button_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_loginActionPerformed
+    private void sigupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sigupActionPerformed
+        // TODO add your handling code here:
+        sign_up sign = new sign_up();
+        this.setVisible(false);
+        sign.setVisible(true);
+    }//GEN-LAST:event_sigupActionPerformed
+
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
         login lo = new login();
         this.setVisible(false);
         lo.setVisible(true);
-    }//GEN-LAST:event_button_loginActionPerformed
-
-    private void button_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_homeActionPerformed
-        // TODO add your handling code here:
-        home hm = new home();
-        this.setVisible(false);
-        hm.setVisible(true);
-    }//GEN-LAST:event_button_homeActionPerformed
+    }//GEN-LAST:event_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,13 +224,13 @@ public class home_page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton button_about;
-    private javax.swing.JButton button_home;
-    private javax.swing.JButton button_login;
-    private javax.swing.JButton button_signup;
+    private javax.swing.JButton about_us;
     private javax.swing.JLabel image_home_page;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel leader;
+    private javax.swing.JButton login;
+    private javax.swing.JButton name_home_1;
     private javax.swing.JLabel name_page;
+    private javax.swing.JButton sigup;
     // End of variables declaration//GEN-END:variables
 }
