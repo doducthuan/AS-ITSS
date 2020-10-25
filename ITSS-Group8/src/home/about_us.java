@@ -110,7 +110,7 @@ public class about_us extends javax.swing.JFrame {
 
         imfor_nguyet.setColumns(20);
         imfor_nguyet.setRows(5);
-        imfor_nguyet.setText("Họ và tên       : Hoàng Minh Nguyệt\nMSSV             : 20176839\nSở thích .       : Nghe nhạc , đọc chuyện\nChâm ngôn    : \"Self-improvement is not about trying to be \n          someone else.It is to be your own best version\"\nTình trạng      : Đã có gấu - Xin gió đông hãy về ....\nCông việc       : Nội trợ \n\n\n                  \" Xinh đẹp - Tài năng - Cháu ngoan Bác Hồ \"");
+        imfor_nguyet.setText("Họ và tên       : Hoàng Minh Nguyệt\nMSSV             : 20176839\nSở thích .       : Nghe nhạc , đọc truyện\nChâm ngôn    : \"Self-improvement is not about trying to be \n          someone else.It is to be your own best version\"\nTình trạng      : Đã có gấu - Xin gió đông hãy về ....\nCông việc       : Nội trợ \n\n\n                  \" Xinh đẹp - Tài năng - Cháu ngoan Bác Hồ \"");
         jScrollPane3.setViewportView(imfor_nguyet);
 
         imfor_thuan.setColumns(20);

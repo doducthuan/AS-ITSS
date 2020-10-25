@@ -71,6 +71,11 @@ public class home_page extends javax.swing.JFrame {
         button_home.setText("HOME");
         button_home.setPreferredSize(new java.awt.Dimension(100, 30));
         button_home.setBackground(Color.white);
+        button_home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_homeActionPerformed(evt);
+            }
+        });
 
         button_about.setText("ABOUT US");
         button_about.setPreferredSize(new java.awt.Dimension(100, 30));
@@ -176,6 +181,13 @@ public class home_page extends javax.swing.JFrame {
         this.setVisible(false);
         lo.setVisible(true);
     }//GEN-LAST:event_button_loginActionPerformed
+
+    private void button_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_homeActionPerformed
+        // TODO add your handling code here:
+        home hm = new home();
+        this.setVisible(false);
+        hm.setVisible(true);
+    }//GEN-LAST:event_button_homeActionPerformed
 
     /**
      * @param args the command line arguments
