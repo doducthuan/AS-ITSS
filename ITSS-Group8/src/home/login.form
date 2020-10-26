@@ -116,6 +116,10 @@
           <Dimension value="[400, 50]"/>
         </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTextField()"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="//username.setPlaceholder(&quot;All your base are belong to us!&quot;);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JPasswordField" name="password">
       <Properties>

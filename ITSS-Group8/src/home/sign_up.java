@@ -7,6 +7,7 @@ package home;
 
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
+import com.placeholder.PlaceHolder;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -22,12 +23,15 @@ import javax.swing.JOptionPane;
  * @author apple
  */
 public class sign_up extends javax.swing.JFrame {
-
+PlaceHolder p2;
     /**
      * Creates new form sign_up
      */
     public sign_up() {
         initComponents();
+        p2 = new PlaceHolder(username_sign,"acount@gmail.com");
+        p2 = new PlaceHolder(pass_sign,"Enter password");
+        p2 = new PlaceHolder(confi_pass_sign,"Enter confirm password");
     }
 
     /**
@@ -213,7 +217,7 @@ public class sign_up extends javax.swing.JFrame {
                     ps.setString(1, user);
                     ps.setString(2, pass);
                     ps.executeUpdate();
-                    JOptionPane.showMessageDialog(rootPane,"Dang ki thanh cong");              
+                    JOptionPane.showMessageDialog(rootPane,"Dang ki thanh cong");                 
                 }
                 demo=0;
             } catch (Exception e) {

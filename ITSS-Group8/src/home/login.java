@@ -5,6 +5,7 @@
  */
 package home;
 
+import com.placeholder.PlaceHolder;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -15,18 +16,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.Document; 
 
 /**
  *
  * @author apple
  */
 public class login extends javax.swing.JFrame {
-
+PlaceHolder p1;
     /**
      * Creates new form login
      */
     public login() {
         initComponents();
+        p1 = new PlaceHolder(username,"acount@gmail.com");
+        p1 = new PlaceHolder(password,"Enter password");
     }
 
     /**
@@ -66,6 +71,7 @@ public class login extends javax.swing.JFrame {
         name_login.setPreferredSize(new java.awt.Dimension(200, 200));
 
         username.setPreferredSize(new java.awt.Dimension(400, 50));
+        //username.setPlaceholder("All your base are belong to us!");
 
         password.setPreferredSize(new java.awt.Dimension(400, 50));
 

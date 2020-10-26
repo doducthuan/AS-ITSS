@@ -68,7 +68,7 @@ public class home_buy extends javax.swing.JFrame {
         };
         search = new javax.swing.JTextField();
         back_home = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        thanh_cuon = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -122,8 +122,8 @@ public class home_buy extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane1.setToolTipText("");
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(600, 100));
+        thanh_cuon.setToolTipText("");
+        thanh_cuon.setPreferredSize(new java.awt.Dimension(600, 100));
 
         jPanel2.setPreferredSize(new java.awt.Dimension(1000, 100));
         jPanel2.setBackground(Color.white);
@@ -149,7 +149,7 @@ public class home_buy extends javax.swing.JFrame {
                 .addComponent(jButton4)
                 .addGap(104, 104, 104)
                 .addComponent(jButton5)
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addContainerGap(259, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,11 +160,11 @@ public class home_buy extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setViewportView(jPanel2);
-        jScrollPane1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        thanh_cuon.setViewportView(jPanel2);
+        thanh_cuon.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         //jScrollPane1.setHorizontalScrollBarPolicy(@null);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -190,7 +190,7 @@ public class home_buy extends javax.swing.JFrame {
                     .addComponent(image_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(198, 198, 198))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(thanh_cuon, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(633, 633, 633))
         );
         layout.setVerticalGroup(
@@ -215,7 +215,7 @@ public class home_buy extends javax.swing.JFrame {
                             .addComponent(image_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(195, 195, 195)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(thanh_cuon, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(405, 405, 405))
         );
 
@@ -283,9 +283,9 @@ public class home_buy extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel name_shop;
     private javax.swing.JButton nut_login;
     private javax.swing.JTextField search;
+    private javax.swing.JScrollPane thanh_cuon;
     // End of variables declaration//GEN-END:variables
 }
