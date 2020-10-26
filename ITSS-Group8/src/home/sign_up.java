@@ -12,9 +12,11 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.lang.reflect.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -29,11 +31,17 @@ PlaceHolder p2;
      */
     public sign_up() {
         initComponents();
-        p2 = new PlaceHolder(username_sign,"acount@gmail.com");
+        boolean g2 = false ;//= echoCharIsSet();
+        String pas= "Enter password";
+        p2 = new PlaceHolder(username_sign,"account@gmail.com");
         p2 = new PlaceHolder(pass_sign,"Enter password");
         pass_sign.setEchoChar((char)0);
+        //Array.fill(pass_sign,'0');
+        pass_sign.selectAll();
+        //resetFocus();
         p2 = new PlaceHolder(confi_pass_sign,"Confirm password");
         confi_pass_sign.setEchoChar((char)0);
+        
     }
 
     /**
@@ -191,12 +199,20 @@ PlaceHolder p2;
         // TODO add your handling code here:
         int demo=0;
         String user = username_sign.getText();
-        String pass = String.valueOf(pass_sign.getPassword());
+       String pass = String.valueOf(pass_sign.getPassword());
+        //String pass = pass_sign.getPassword();
+       // pass.setEchoChar('*');
+       //Arrays.fill(pass,'0');
+       //pass_sign.selectAll();
+       //pass_sign.setEchoChar('*');
+       //resetFocus();
         String confi_pass1 = String.valueOf(confi_pass_sign.getPassword());
-        if(user.equals("Admin")==true||user.equals("")==true){
+        if(user.equals("Admin")==true||user.equals("")==true|| user.equals("account@gmail.com")==true){
             JOptionPane.showMessageDialog(rootPane,"Username khong hop le !","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(pass.equals("")==true){
+        }else if(pass.equals("")==true|| pass.equals("Enter password")==true){
             JOptionPane.showMessageDialog(rootPane,"Ban chua nhap password !","Warning",JOptionPane.WARNING_MESSAGE);
+        }else if(confi_pass1.equals("Confirm password")==true){
+            JOptionPane.showMessageDialog(rootPane,"Ban chua xac nhan password !","Warning",JOptionPane.WARNING_MESSAGE);
         }else if(pass.equals(confi_pass1)==false){
             JOptionPane.showMessageDialog(rootPane,"Xac nhan password sai !","Warning",JOptionPane.WARNING_MESSAGE);
         }else{
