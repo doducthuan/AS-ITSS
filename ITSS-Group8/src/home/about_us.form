@@ -184,7 +184,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; t&#xea;n       : Ho&#xe0;ng Minh Nguy&#x1ec7;t&#xa;MSSV             : 20176839&#xa;S&#x1edf; th&#xed;ch .       : Nghe nh&#x1ea1;c , &#x111;&#x1ecd;c truy&#x1ec7;n&#xa;Ch&#xe2;m ng&#xf4;n    : &quot;Self-improvement is not about trying to be &#xa;          someone else.It is to be your own best version&quot;&#xa;T&#xec;nh tr&#x1ea1;ng      : &#x110;&#xe3; c&#xf3; g&#x1ea5;u - Xin gi&#xf3; &#x111;&#xf4;ng h&#xe3;y v&#x1ec1; ....&#xa;C&#xf4;ng vi&#x1ec7;c       : N&#x1ed9;i tr&#x1ee3; &#xa;&#xa;&#xa;                  &quot; Xinh &#x111;&#x1eb9;p - T&#xe0;i n&#x103;ng - Ch&#xe1;u ngoan B&#xe1;c H&#x1ed3; &quot;"/>
+            <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; t&#xea;n       : Ho&#xe0;ng Minh Nguy&#x1ec7;t&#xa;MSSV             : 20176839&#xa;S&#x1edf; th&#xed;ch .       : Nghe nh&#x1ea1;c , &#x111;&#x1ecd;c truy&#x1ec7;n&#xa;Ch&#xe2;m ng&#xf4;n    : &quot;Self-improvement is not about trying to be &#xa;          someone else.It is to be your own best version&quot;&#xa;T&#xec;nh tr&#x1ea1;ng      : &#x110;&#xe3; c&#xf3; g&#x1ea5;u - Xin gi&#xf3; &#x111;&#xf4;ng h&#xe3;y v&#x1ec1; ....&#xa;C&#xf4;ng vi&#x1ec7;c       : Sinh vi&#xea;n&#xa;&#xa;&#xa;                  &quot; Xinh &#x111;&#x1eb9;p - T&#xe0;i n&#x103;ng - Ch&#xe1;u ngoan B&#xe1;c H&#x1ed3; &quot;"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -200,7 +200,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; t&#xea;n       : &#x110;&#x1ed7; &#x110;&#x1ee9;c Thu&#x1ead;n&#xa;MSSV             : 20176884&#xa;S&#x1edf; th&#xed;ch         : B&#xed; m&#x1ead;t&#xa;Ch&#xe2;m ng&#xf4;n    : Kh&#xf4;ng th&#x1ec3; b&#x1ead;t m&#xed; hihi&#xa;T&#xec;nh tr&#x1ea1;ng      : FA&#xa;C&#xf4;ng vi&#x1ec7;c       : L&#xed;nh b&#x1eaf;n t&#x1ec9;a - S&#xe1;t th&#x1ee7;&#xa;&#xa;&#xa;                                         &quot; 12 t&#xed;nh c&#xe1;ch &quot;"/>
+            <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; t&#xea;n       : &#x110;&#x1ed7; &#x110;&#x1ee9;c Thu&#x1ead;n&#xa;MSSV             : 20176884&#xa;S&#x1edf; th&#xed;ch         : B&#xed; m&#x1ead;t&#xa;Ch&#xe2;m ng&#xf4;n    : B&#xed; m&#x1ead;t &#xa;T&#xec;nh tr&#x1ea1;ng      : FA&#xa;C&#xf4;ng vi&#x1ec7;c       : B&#xed; m&#x1ead;t&#xa;&#xa;                                         &quot; 12 t&#xed;nh c&#xe1;ch &quot;"/>
           </Properties>
         </Component>
       </SubComponents>

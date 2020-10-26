@@ -110,12 +110,12 @@ public class about_us extends javax.swing.JFrame {
 
         imfor_nguyet.setColumns(20);
         imfor_nguyet.setRows(5);
-        imfor_nguyet.setText("Họ và tên       : Hoàng Minh Nguyệt\nMSSV             : 20176839\nSở thích .       : Nghe nhạc , đọc truyện\nChâm ngôn    : \"Self-improvement is not about trying to be \n          someone else.It is to be your own best version\"\nTình trạng      : Đã có gấu - Xin gió đông hãy về ....\nCông việc       : Nội trợ \n\n\n                  \" Xinh đẹp - Tài năng - Cháu ngoan Bác Hồ \"");
+        imfor_nguyet.setText("Họ và tên       : Hoàng Minh Nguyệt\nMSSV             : 20176839\nSở thích .       : Nghe nhạc , đọc truyện\nChâm ngôn    : \"Self-improvement is not about trying to be \n          someone else.It is to be your own best version\"\nTình trạng      : Đã có gấu - Xin gió đông hãy về ....\nCông việc       : Sinh viên\n\n\n                  \" Xinh đẹp - Tài năng - Cháu ngoan Bác Hồ \"");
         jScrollPane3.setViewportView(imfor_nguyet);
 
         imfor_thuan.setColumns(20);
         imfor_thuan.setRows(5);
-        imfor_thuan.setText("Họ và tên       : Đỗ Đức Thuận\nMSSV             : 20176884\nSở thích         : Bí mật\nChâm ngôn    : Không thể bật mí hihi\nTình trạng      : FA\nCông việc       : Lính bắn tỉa - Sát thủ\n\n\n                                         \" 12 tính cách \"");
+        imfor_thuan.setText("Họ và tên       : Đỗ Đức Thuận\nMSSV             : 20176884\nSở thích         : Bí mật\nChâm ngôn    : Bí mật \nTình trạng      : FA\nCông việc       : Bí mật\n\n                                         \" 12 tính cách \"");
         jScrollPane4.setViewportView(imfor_thuan);
 
         jTextArea5.setColumns(20);
