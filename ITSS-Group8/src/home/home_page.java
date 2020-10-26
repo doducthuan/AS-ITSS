@@ -95,6 +95,7 @@ public class home_page extends javax.swing.JFrame {
             }
         });
 
+        name_home_1.setBackground(new java.awt.Color(255, 255, 255));
         name_home_1.setText("HOME");
         name_home_1.setPreferredSize(new java.awt.Dimension(150, 40));
         name_home_1.setBackground(Color.white);

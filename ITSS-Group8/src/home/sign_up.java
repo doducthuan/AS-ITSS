@@ -213,7 +213,7 @@ public class sign_up extends javax.swing.JFrame {
                     ps.setString(1, user);
                     ps.setString(2, pass);
                     ps.executeUpdate();
-                    JOptionPane.showMessageDialog(rootPane,"Dang ki thanh con");                    
+                    JOptionPane.showMessageDialog(rootPane,"Dang ki thanh cong");              
                 }
                 demo=0;
             } catch (Exception e) {
