@@ -10,6 +10,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
+import javax.swing.BorderFactory;
 
 /**
  *
@@ -44,7 +45,6 @@ public class home_page extends javax.swing.JFrame {
         };
         name_page = new javax.swing.JLabel();
         leader = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         login = new javax.swing.JButton();
         sigup = new javax.swing.JButton();
         about_us = new javax.swing.JButton();
@@ -54,21 +54,22 @@ public class home_page extends javax.swing.JFrame {
 
         getContentPane().setBackground( Color.white );
         image_home_page.setText("");
-        image_home_page.setPreferredSize(new java.awt.Dimension(800, 900));
+        image_home_page.setPreferredSize(new java.awt.Dimension(700, 700));
 
-        name_page.setText("          ENTITITI Shop");
-        name_page.setFont(new Font("Serif", Font.PLAIN, 50));
-        name_page.setPreferredSize(new java.awt.Dimension(500, 80));
+        name_page.setFont(null);
+        name_page.setText("   ENTITITI");
+        name_page.setFont(new Font("Courier New", Font.BOLD, 70));
+        name_page.setPreferredSize(new java.awt.Dimension(550, 80));
         name_page.setRequestFocusEnabled(false);
 
-        leader.setText(" .                                 \" Thích thì mua - Không thích cũng phải mua \"");
-        leader.setFont(new Font("VARISON", Font.PLAIN, 14));
+        leader.setText("      Internet Media Store");
+        leader.setFont(new Font("Courier New", Font.PLAIN, 25));
         leader.setPreferredSize(new java.awt.Dimension(500, 50));
 
-        jLabel1.setText("       - LEADER TRUNG -");
-        jLabel1.setPreferredSize(new java.awt.Dimension(250, 40));
-
+        login.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         login.setText("LOGIN");
+        login.setBorder(BorderFactory.createEmptyBorder());
+        login.setContentAreaFilled(false);
         login.setPreferredSize(new java.awt.Dimension(150, 40));
         login.setBackground(Color.white);
         login.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +78,10 @@ public class home_page extends javax.swing.JFrame {
             }
         });
 
+        sigup.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         sigup.setText("SIGN UP");
+        sigup.setBorder(BorderFactory.createEmptyBorder());
+        sigup.setContentAreaFilled(false);
         sigup.setPreferredSize(new java.awt.Dimension(150, 40));
         sigup.setBackground(Color.white);
         sigup.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +90,10 @@ public class home_page extends javax.swing.JFrame {
             }
         });
 
+        about_us.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         about_us.setText("ABOUT US");
+        about_us.setBorder(BorderFactory.createEmptyBorder());
+        about_us.setContentAreaFilled(false);
         about_us.setPreferredSize(new java.awt.Dimension(150, 40));
         about_us.setBackground(Color.white);
         about_us.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +103,10 @@ public class home_page extends javax.swing.JFrame {
         });
 
         name_home_1.setBackground(new java.awt.Color(255, 255, 255));
+        name_home_1.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         name_home_1.setText("HOME");
+        name_home_1.setBorder(BorderFactory.createEmptyBorder());
+        name_home_1.setContentAreaFilled(false);
         name_home_1.setPreferredSize(new java.awt.Dimension(150, 40));
         name_home_1.setBackground(Color.white);
         name_home_1.addActionListener(new java.awt.event.ActionListener() {
@@ -110,39 +120,33 @@ public class home_page extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
+                .addGap(100, 100, 100)
                 .addComponent(image_home_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(62, 62, 62)
                         .addComponent(leader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80))
+                        .addGap(68, 68, 68))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addComponent(name_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(300, 300, 300)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(name_home_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8)
-                                .addComponent(about_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8)
-                                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8)
-                                .addComponent(sigup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(15, 15, 15)
+                        .addComponent(name_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(name_home_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)
+                        .addComponent(about_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)
+                        .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)
+                        .addComponent(sigup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(114, 114, 114))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(image_home_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sigup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -150,11 +154,10 @@ public class home_page extends javax.swing.JFrame {
                             .addComponent(name_home_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(197, 197, 197)
                         .addComponent(name_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(leader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 0, 0)
+                        .addComponent(leader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(image_home_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 100, Short.MAX_VALUE))
         );
 
         pack();
@@ -227,7 +230,6 @@ public class home_page extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton about_us;
     private javax.swing.JLabel image_home_page;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel leader;
     private javax.swing.JButton login;
     private javax.swing.JButton name_home_1;
