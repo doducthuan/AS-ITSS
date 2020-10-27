@@ -91,6 +91,7 @@ PlaceHolder p1;
 
         sign_up.setText("Sign up");
         sign_up.setPreferredSize(new java.awt.Dimension(100, 35));
+        sign_up.setBackground(Color.white);
         sign_up.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sign_upActionPerformed(evt);
@@ -99,6 +100,7 @@ PlaceHolder p1;
 
         login.setText("Login");
         login.setPreferredSize(new java.awt.Dimension(100, 35));
+        login.setBackground(Color.white);
         login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginActionPerformed(evt);
@@ -124,11 +126,11 @@ PlaceHolder p1;
                 .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
+                        .addGap(0, 0, 0)
                         .addComponent(sign_up, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(112, 112, 112))
+                        .addGap(142, 142, 142))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -232,8 +234,7 @@ PlaceHolder p1;
 
     private void passwordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusLost
         // TODO add your handling code here:
-        if(password.getText().equals("")){
-            //pass_sign.setText("Enter password");
+        if(password.getText().equals("")){           
             password.setEchoChar((char)0);
         }
     }//GEN-LAST:event_passwordFocusLost

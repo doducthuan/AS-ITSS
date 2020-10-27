@@ -33,21 +33,12 @@ PlaceHolder p2;
      * Creates new form sign_up
      */
     public sign_up() {
-        //PlaceHolder p2;
+        
         initComponents();
-        //boolean g2 = false ;//= echoCharIsSet();
-        //String pas= "Enter password";
+        
         p2 = new PlaceHolder(username_sign,"account@gmail.com");
-        //username_sign.setEchoCHar('*');
         p2 = new PlaceHolder(pass_sign,"Enter password");
         pass_sign.setEchoChar((char)0);
-        /*String pass1 = String.valueOf(pass_sign.getPassword());
-        if(pass1.equals("Enter password")==true){
-            pass_sign.setEchoChar((char)0);
-        }else{
-            pass_sign.setEchoChar('*');
-        }
-        */
         p2 = new PlaceHolder(confi_pass_sign,"Confirm password");
         confi_pass_sign.setEchoChar((char)0);
         //initComponents();
@@ -128,6 +119,7 @@ PlaceHolder p2;
 
         sign_up.setText("Sign up");
         sign_up.setPreferredSize(new java.awt.Dimension(120, 35));
+        sign_up.setBackground(Color.white);
         sign_up.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sign_upActionPerformed(evt);
@@ -230,17 +222,13 @@ PlaceHolder p2;
         String confi_pass1 = String.valueOf(confi_pass_sign.getPassword());
         if(user.equals("Admin")==true||user.equals("")==true|| user.equals("account@gmail.com")==true){
             JOptionPane.showMessageDialog(rootPane,"Tên đăng nhập không hợp lệ !","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(pass.equals("")==true|| pass.equals("Enter password")==true){
-            //pass_sign.setEchoChar((char)0);
+        }else if(pass.equals("")==true|| pass.equals("Enter password")==true){           
             JOptionPane.showMessageDialog(rootPane,"Bạn chưa nhập mật khẩu !","Warning",JOptionPane.WARNING_MESSAGE);
         }else if(confi_pass1.equals("Confirm password")==true||confi_pass1.equals("")==true){
-            //confi_pass_sign.setEchoChar((char)0);
             JOptionPane.showMessageDialog(rootPane,"Bạn chưa xác nhận mật khẩu!","Warning",JOptionPane.WARNING_MESSAGE);
         }else if(pass.equals(confi_pass1)==false){
             JOptionPane.showMessageDialog(rootPane,"Xác nhận mật khẩu sai !","Warning",JOptionPane.WARNING_MESSAGE);
-        }else{
-            //pass_sign.setEchoChar('*');
-            //confi_pass_sign.setEchoChar('*');
+        }else{          
             Connection conn = null;
             Statement st = null;
             ResultSet rs = null;
@@ -302,8 +290,7 @@ PlaceHolder p2;
 
     private void pass_signFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pass_signFocusLost
         // TODO add your handling code here:
-        if(pass_sign.getText().equals("")){
-            //pass_sign.setText("Enter password");
+        if(pass_sign.getText().equals("")){            
             pass_sign.setEchoChar((char)0);
         }
     }//GEN-LAST:event_pass_signFocusLost
@@ -320,8 +307,7 @@ PlaceHolder p2;
 
     private void confi_pass_signFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_confi_pass_signFocusLost
         // TODO add your handling code here:
-        if(confi_pass_sign.getText().equals("")){
-            //pass_sign.setText("Enter password");
+        if(confi_pass_sign.getText().equals("")){           
             confi_pass_sign.setEchoChar((char)0);
         }
     }//GEN-LAST:event_confi_pass_signFocusLost
