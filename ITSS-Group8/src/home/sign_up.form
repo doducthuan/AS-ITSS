@@ -137,6 +137,13 @@
           <Dimension value="[400, 50]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="pass_signFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="pass_signFocusLost"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//pass_sign.setText(&quot;Enter password&quot;);&#xa;//pass_sign.setEchoChar(&apos;*&apos;);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JPasswordField" name="confi_pass_sign">
       <Properties>
@@ -144,6 +151,10 @@
           <Dimension value="[400, 50]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="confi_pass_signFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="confi_pass_signFocusLost"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

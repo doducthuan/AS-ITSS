@@ -12,12 +12,15 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.Arrays;
 import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -30,18 +33,24 @@ PlaceHolder p2;
      * Creates new form sign_up
      */
     public sign_up() {
+        //PlaceHolder p2;
         initComponents();
-        boolean g2 = false ;//= echoCharIsSet();
-        String pas= "Enter password";
+        //boolean g2 = false ;//= echoCharIsSet();
+        //String pas= "Enter password";
         p2 = new PlaceHolder(username_sign,"account@gmail.com");
+        //username_sign.setEchoCHar('*');
         p2 = new PlaceHolder(pass_sign,"Enter password");
         pass_sign.setEchoChar((char)0);
-        //Array.fill(pass_sign,'0');
-        pass_sign.selectAll();
-        //resetFocus();
+        /*String pass1 = String.valueOf(pass_sign.getPassword());
+        if(pass1.equals("Enter password")==true){
+            pass_sign.setEchoChar((char)0);
+        }else{
+            pass_sign.setEchoChar('*');
+        }
+        */
         p2 = new PlaceHolder(confi_pass_sign,"Confirm password");
         confi_pass_sign.setEchoChar((char)0);
-        
+        //initComponents();
     }
 
     /**
@@ -84,9 +93,27 @@ PlaceHolder p2;
 
         username_sign.setPreferredSize(new java.awt.Dimension(400, 50));
 
+        //pass_sign.setText("Enter password");
+        //pass_sign.setEchoChar('*');
         pass_sign.setPreferredSize(new java.awt.Dimension(400, 50));
+        pass_sign.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pass_signFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                pass_signFocusLost(evt);
+            }
+        });
 
         confi_pass_sign.setPreferredSize(new java.awt.Dimension(400, 50));
+        confi_pass_sign.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                confi_pass_signFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                confi_pass_signFocusLost(evt);
+            }
+        });
 
         jLabel1.setText("Already have an account?");
         jLabel1.setPreferredSize(new java.awt.Dimension(200, 16));
@@ -200,22 +227,20 @@ PlaceHolder p2;
         int demo=0;
         String user = username_sign.getText();
        String pass = String.valueOf(pass_sign.getPassword());
-        //String pass = pass_sign.getPassword();
-       // pass.setEchoChar('*');
-       //Arrays.fill(pass,'0');
-       //pass_sign.selectAll();
-       //pass_sign.setEchoChar('*');
-       //resetFocus();
         String confi_pass1 = String.valueOf(confi_pass_sign.getPassword());
         if(user.equals("Admin")==true||user.equals("")==true|| user.equals("account@gmail.com")==true){
-            JOptionPane.showMessageDialog(rootPane,"Username khong hop le !","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Tên đăng nhập không hợp lệ !","Warning",JOptionPane.WARNING_MESSAGE);
         }else if(pass.equals("")==true|| pass.equals("Enter password")==true){
-            JOptionPane.showMessageDialog(rootPane,"Ban chua nhap password !","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(confi_pass1.equals("Confirm password")==true){
-            JOptionPane.showMessageDialog(rootPane,"Ban chua xac nhan password !","Warning",JOptionPane.WARNING_MESSAGE);
+            //pass_sign.setEchoChar((char)0);
+            JOptionPane.showMessageDialog(rootPane,"Bạn chưa nhập mật khẩu !","Warning",JOptionPane.WARNING_MESSAGE);
+        }else if(confi_pass1.equals("Confirm password")==true||confi_pass1.equals("")==true){
+            //confi_pass_sign.setEchoChar((char)0);
+            JOptionPane.showMessageDialog(rootPane,"Bạn chưa xác nhận mật khẩu!","Warning",JOptionPane.WARNING_MESSAGE);
         }else if(pass.equals(confi_pass1)==false){
-            JOptionPane.showMessageDialog(rootPane,"Xac nhan password sai !","Warning",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Xác nhận mật khẩu sai !","Warning",JOptionPane.WARNING_MESSAGE);
         }else{
+            //pass_sign.setEchoChar('*');
+            //confi_pass_sign.setEchoChar('*');
             Connection conn = null;
             Statement st = null;
             ResultSet rs = null;
@@ -235,14 +260,14 @@ PlaceHolder p2;
                     }                   
                 }
                 if(demo==1){
-                    JOptionPane.showMessageDialog(rootPane,"Tai khoan da ton tai","Warning",JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(rootPane,"Tài khoản đã tồn tại","Warning",JOptionPane.WARNING_MESSAGE);
                 }else if(demo==0){          
                     String sql3 = "INSERT INTO account VALUES (?,?)";                   
                     ps = (PreparedStatement) conn.prepareStatement(sql3);
                     ps.setString(1, user);
                     ps.setString(2, pass);
                     ps.executeUpdate();
-                    JOptionPane.showMessageDialog(rootPane,"Dang ki thanh cong");                 
+                    JOptionPane.showMessageDialog(rootPane,"Đăng kí thành công ");                 
                 }
                 demo=0;
             } catch (Exception e) {
@@ -264,6 +289,42 @@ PlaceHolder p2;
             }                                                           
         }
     }//GEN-LAST:event_sign_upActionPerformed
+
+    private void pass_signFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pass_signFocusGained
+        // TODO add your handling code here:
+        if(pass_sign.getText().equals("Enter password")){
+            pass_sign.setEchoChar('*');
+            pass_sign.setText("");
+        }else{
+            pass_sign.selectAll();
+        }
+    }//GEN-LAST:event_pass_signFocusGained
+
+    private void pass_signFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pass_signFocusLost
+        // TODO add your handling code here:
+        if(pass_sign.getText().equals("")){
+            //pass_sign.setText("Enter password");
+            pass_sign.setEchoChar((char)0);
+        }
+    }//GEN-LAST:event_pass_signFocusLost
+
+    private void confi_pass_signFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_confi_pass_signFocusGained
+        // TODO add your handling code here:
+        if(confi_pass_sign.getText().equals("Confirm password")){
+            confi_pass_sign.setEchoChar('*');
+            confi_pass_sign.setText("");
+        }else{
+            confi_pass_sign.selectAll();
+        }
+    }//GEN-LAST:event_confi_pass_signFocusGained
+
+    private void confi_pass_signFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_confi_pass_signFocusLost
+        // TODO add your handling code here:
+        if(confi_pass_sign.getText().equals("")){
+            //pass_sign.setText("Enter password");
+            confi_pass_sign.setEchoChar((char)0);
+        }
+    }//GEN-LAST:event_confi_pass_signFocusLost
 
     /**
      * @param args the command line arguments

@@ -75,6 +75,14 @@ PlaceHolder p1;
         //username.setPlaceholder("All your base are belong to us!");
 
         password.setPreferredSize(new java.awt.Dimension(400, 50));
+        password.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                passwordFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordFocusLost(evt);
+            }
+        });
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
@@ -177,10 +185,10 @@ PlaceHolder p1;
         // TODO add your handling code here:
         String user2 = username.getText();
         String password2 = String.valueOf(password.getPassword());
-        if(user2.equals("")){
-            JOptionPane.showMessageDialog(rootPane,"Ban chua nhap username","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(password2.equals("")){
-            JOptionPane.showMessageDialog(rootPane,"Ban chua nhap password","Warning",JOptionPane.WARNING_MESSAGE);
+        if(user2.equals("")||user2.equals("acount@gmail.com")){
+            JOptionPane.showMessageDialog(rootPane,"Tên đăng nhập không hợp lệ","Warning",JOptionPane.WARNING_MESSAGE);
+        }else if(password2.equals("")||password2.equals("Enter password")){
+            JOptionPane.showMessageDialog(rootPane,"Mật khẩu không hợp lệ","Warning",JOptionPane.WARNING_MESSAGE);
         }else{
             try{
                 
@@ -198,7 +206,7 @@ PlaceHolder p1;
                     this.setVisible(false);
                     ifor.setVisible(true);                                     
                 }else{
-                    JOptionPane.showMessageDialog(rootPane,"Account does not exist ! Please register and come back -s2-");
+                    JOptionPane.showMessageDialog(rootPane,"Tài khoản không tồn tại - Hãy đăng kí");
                 }
                 ps.close(); 
                 conn.close();
@@ -211,6 +219,24 @@ PlaceHolder p1;
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
+
+    private void passwordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusGained
+        // TODO add your handling code here:
+        if(password.getText().equals("Enter password")){
+            password.setEchoChar('*');
+            password.setText("");
+        }else{
+            password.selectAll();
+        }
+    }//GEN-LAST:event_passwordFocusGained
+
+    private void passwordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusLost
+        // TODO add your handling code here:
+        if(password.getText().equals("")){
+            //pass_sign.setText("Enter password");
+            password.setEchoChar((char)0);
+        }
+    }//GEN-LAST:event_passwordFocusLost
 
     /**
      * @param args the command line arguments
