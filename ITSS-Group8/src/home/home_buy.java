@@ -63,6 +63,10 @@ PlaceHolder p1;
         search = new javax.swing.JTextField();
         back_home_buy = new javax.swing.JButton();
         nut_buy = new javax.swing.JButton();
+        book = new javax.swing.JLabel();
+        compact_disc = new javax.swing.JLabel();
+        dvd = new javax.swing.JLabel();
+        long_player = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -76,6 +80,7 @@ PlaceHolder p1;
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(1440, 900));
 
         getContentPane().setBackground(Color.white);
         image_page.setText("");
@@ -116,12 +121,27 @@ PlaceHolder p1;
         nut_buy.setBackground(Color.white);
         nut_buy.setPreferredSize(new java.awt.Dimension(40, 40));
 
+        book.setIcon(new javax.swing.ImageIcon(getClass().getResource("/product/book.png"))); // NOI18N
+        book.setText("    BOOK");
+        book.setPreferredSize(new java.awt.Dimension(200, 50));
+
+        compact_disc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/product/compact-disc.png"))); // NOI18N
+        compact_disc.setText("    COMPACT-DISC");
+        compact_disc.setPreferredSize(new java.awt.Dimension(200, 50));
+
+        dvd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/product/dvd.png"))); // NOI18N
+        dvd.setText("    DVDs");
+        dvd.setPreferredSize(new java.awt.Dimension(200, 50));
+
+        long_player.setIcon(new javax.swing.ImageIcon(getClass().getResource("/product/long-player.png"))); // NOI18N
+        long_player.setText("    LONG-PLAYER");
+        long_player.setPreferredSize(new java.awt.Dimension(200, 50));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
                 .addComponent(image_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -138,6 +158,14 @@ PlaceHolder p1;
                     .addComponent(nut_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(image_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 59, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(book, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(compact_disc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dvd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(long_player, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,7 +191,15 @@ PlaceHolder p1;
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(nut_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(600, 600, 600))
+                .addGap(40, 40, 40)
+                .addComponent(book, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100)
+                .addComponent(compact_disc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100)
+                .addComponent(dvd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addComponent(long_player, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
         );
 
         pack();
@@ -221,9 +257,13 @@ PlaceHolder p1;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_home_buy;
+    private javax.swing.JLabel book;
+    private javax.swing.JLabel compact_disc;
+    private javax.swing.JLabel dvd;
     private javax.swing.JLabel image_login;
     private javax.swing.JLabel image_page;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel long_player;
     private javax.swing.JLabel name_shop;
     private javax.swing.JButton nut_buy;
     private javax.swing.JButton nut_login;
