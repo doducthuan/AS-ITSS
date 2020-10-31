@@ -8,7 +8,10 @@ package home;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  *
@@ -21,6 +24,10 @@ public class about_us extends javax.swing.JFrame {
      */
     public about_us() {
         initComponents();
+        /*JFrame frame = this;
+        GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice device = graphics.getDefaultScreenDevice();
+        device.setFullScreenWindow(frame);*/
     }
 
     /**

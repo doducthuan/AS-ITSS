@@ -33,6 +33,10 @@ public class home_page extends javax.swing.JFrame {
     public home_page() {
     
         initComponents();
+        //JFrame frame = this;
+        /*GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice device = graphics.getDefaultScreenDevice();
+        device.setFullScreenWindow(frame);*/
          
     }
 

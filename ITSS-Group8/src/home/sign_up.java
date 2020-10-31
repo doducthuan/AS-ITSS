@@ -12,6 +12,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
@@ -21,6 +23,7 @@ import java.sql.ResultSet;
 import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,6 +44,10 @@ PlaceHolder p2;
         pass_sign.setEchoChar((char)0);
         p2 = new PlaceHolder(confi_pass_sign,"Confirm password");
         confi_pass_sign.setEchoChar((char)0);
+        //JFrame frame = this;
+        /*GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice device = graphics.getDefaultScreenDevice();
+        device.setFullScreenWindow(frame);*/
         //initComponents();
     }
 
