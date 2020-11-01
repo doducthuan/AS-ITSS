@@ -11,14 +11,17 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.ScrollPaneConstants;
-import com.raphaellevy.fullscreen.FullScreenMacOS;
+//import com.raphaellevy.fullscreen.FullScreenMacOS;
 import java.awt.DisplayMode;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
 import static java.awt.SystemColor.window;
 import java.awt.Window;
 import java.lang.System.Logger.Level;
 import java.lang.reflect.Method;
+import javax.swing.JViewport;
+import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 /**
  *
@@ -40,10 +43,7 @@ public class test_nao extends javax.swing.JFrame {
         
         initComponents();
         
-        JFrame frame = this;
-        GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice device = graphics.getDefaultScreenDevice();
-        device.setFullScreenWindow(frame);
+        
         /*JFrame frameToAddListenersTo = null;
         DisplayMode displayMode = new DisplayMode(640, 480, 32, 60);
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -75,6 +75,7 @@ public class test_nao extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,13 +115,20 @@ public class test_nao extends javax.swing.JFrame {
         );
 
         jScrollPane1.setViewportView(jPanel1);
-        jScrollPane1.setBounds(10, 35, 250, 525);
+        /*jScrollPane1.setBounds(10, 35, 250, 525);
         jScrollPane1.setBackground(new Color(1, 0, 0, 0));
         jScrollPane1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane1.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
         jScrollPane1.getViewport().setBorder(null);
         jScrollPane1.setViewportBorder(null);
-        jScrollPane1.setBorder(null);
+        jScrollPane1.setBorder(null);*/
+
+        jButton5.setText("jButton5");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -129,18 +137,35 @@ public class test_nao extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(111, 111, 111)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(jButton5)))
                 .addContainerGap(177, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    @SuppressWarnings("empty-statement")
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        //jScrollPane1.JViewport.setViewPosition()
+        //JViewport.setViewPosition(0x14);
+      // public int getScrollableUnitIncrement(Rectangle visibleRect, int orientation, int direction) { 
+     //return 10; 
+    //} 
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,6 +214,7 @@ public class test_nao extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
