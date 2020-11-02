@@ -94,7 +94,7 @@
                           </Group>
                           <Component id="long_list" alignment="1" min="-2" pref="780" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="right_dvd" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="right_long" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -132,12 +132,12 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="name_shop" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                       <Component id="nut_buy" min="-2" max="-2" attributes="0"/>
                                       <Component id="search" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="name_shop" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -379,9 +379,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="book_1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       <Component id="book_2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Component id="book_3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Component id="book_4" min="-2" max="-2" attributes="0"/>
@@ -398,22 +398,30 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="book_1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="book_2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="book_3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="book_4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="book_5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="book_6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="book_7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="book_1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="book_3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="book_4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="book_5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="book_6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="book_7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="book8" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="book_2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="book8" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JButton" name="book_1">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor" postCode="book_1.setBorder(BorderFactory.createEmptyBorder());&#xa;book_1.setContentAreaFilled(false);">
+                  <Image iconType="3" name="/product/book/book1.jpg"/>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[150, 100]"/>
                 </Property>
@@ -422,12 +430,16 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="book_1ActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JButton(&quot;Sach hay&quot;,icon)"/>
-                <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="ImageIcon icon = new ImageIcon(&quot;image/product/book/book1.jpg&quot;);"/>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JButton()"/>
+                <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="//ImageIcon icon = new ImageIcon(&quot;image/product/book/book1.jpg&quot;);"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="book_2">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor" postCode="book_2.setBorder(BorderFactory.createEmptyBorder());&#xa;book_2.setContentAreaFilled(false);">
+                  <Image iconType="3" name="/product/book/book2.jpg"/>
+                </Property>
+                <Property name="horizontalTextPosition" type="int" value="4"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[150, 100]"/>
                 </Property>
@@ -438,9 +450,14 @@
             </Component>
             <Component class="javax.swing.JButton" name="book_3">
               <Properties>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/product/book/book3.jpeg"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor" postCode="book_3.setBorder(BorderFactory.createEmptyBorder());&#xa;book_3.setContentAreaFilled(false);">
                   <Dimension value="[150, 100]"/>
                 </Property>
+                <Property name="verticalAlignment" type="int" value="1"/>
+                <Property name="verticalTextPosition" type="int" value="3"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="book_3ActionPerformed"/>
@@ -448,6 +465,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="book_4">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor" postCode="book_4.setBorder(BorderFactory.createEmptyBorder());&#xa;book_4.setContentAreaFilled(false);">
+                  <Image iconType="3" name="/product/book/book4.jpg"/>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[150, 100]"/>
                 </Property>
@@ -455,31 +475,55 @@
             </Component>
             <Component class="javax.swing.JButton" name="book_5">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/product/book/book5.jpg"/>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[150, 100]"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="book_5.setBorder(BorderFactory.createEmptyBorder());&#xa;book_5.setContentAreaFilled(false);"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="book_6">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/product/book/book6.jpg"/>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[150, 100]"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="book_6.setBorder(BorderFactory.createEmptyBorder());&#xa;book_6.setContentAreaFilled(false);"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="book_7">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/product/book/book7.jpg"/>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[150, 100]"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="book_7.setBorder(BorderFactory.createEmptyBorder());&#xa;book_7.setContentAreaFilled(false);"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="book8">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/product/book/book8.jpg"/>
+                </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[150, 100]"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="book8.setBorder(BorderFactory.createEmptyBorder());&#xa;book8.setContentAreaFilled(false);"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
