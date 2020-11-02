@@ -177,7 +177,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="sign_up">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sign up"/>
+        <Property name="text" type="java.lang.String" value="Register"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[120, 35]"/>
         </Property>

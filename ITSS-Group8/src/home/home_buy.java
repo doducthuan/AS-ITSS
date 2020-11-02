@@ -25,16 +25,14 @@ import javax.swing.border.Border;
  */
 public class home_buy extends javax.swing.JFrame {
 PlaceHolder p1;
+int k=0;
     /**
      * Creates new form home
      */
     public home_buy() {
         initComponents();
         p1 = new PlaceHolder(search,"Search");
-        /*JFrame frame = this;
-        GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice device = graphics.getDefaultScreenDevice();
-        device.setFullScreenWindow(frame);*/
+        
     }
 
     /**
@@ -115,6 +113,14 @@ PlaceHolder p1;
         book_27 = new javax.swing.JButton();
         book_28 = new javax.swing.JButton();
         book11 = new javax.swing.JButton();
+        right_book = new javax.swing.JButton();
+        right_compact = new javax.swing.JButton();
+        right_dvd = new javax.swing.JButton();
+        right_long = new javax.swing.JButton();
+        left_book = new javax.swing.JButton();
+        left_compact = new javax.swing.JButton();
+        left_dvd = new javax.swing.JButton();
+        left_long = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -155,6 +161,11 @@ PlaceHolder p1;
         });
 
         search.setPreferredSize(new java.awt.Dimension(250, 30));
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
 
         back_home_buy.setText("HOME");
         back_home_buy.setPreferredSize(new java.awt.Dimension(100, 30));
@@ -485,6 +496,98 @@ PlaceHolder p1;
         long_list.setViewportBorder(null);
         long_list.setBorder(null);
 
+        right_book.setIcon(new javax.swing.ImageIcon(getClass().getResource("/next.png"))); // NOI18N
+        right_book.setPreferredSize(new java.awt.Dimension(50, 50));
+        right_book.setBorder(BorderFactory.createEmptyBorder());
+        right_book.setContentAreaFilled(false);
+        right_book.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                right_bookActionPerformed(evt);
+            }
+        });
+
+        right_compact.setIcon(new javax.swing.ImageIcon(getClass().getResource("/next.png"))); // NOI18N
+        right_compact.setPreferredSize(new java.awt.Dimension(50, 50));
+        right_compact.setBorder(BorderFactory.createEmptyBorder());
+        right_compact.setContentAreaFilled(false);
+        right_compact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                right_compactActionPerformed(evt);
+            }
+        });
+
+        right_dvd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/next.png"))); // NOI18N
+        right_dvd.setPreferredSize(new java.awt.Dimension(50, 50));
+        right_dvd.setBorder(BorderFactory.createEmptyBorder());
+        right_dvd.setContentAreaFilled(false);
+        right_dvd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                right_dvdActionPerformed(evt);
+            }
+        });
+
+        right_long.setIcon(new javax.swing.ImageIcon(getClass().getResource("/next.png"))); // NOI18N
+        right_long.setPreferredSize(new java.awt.Dimension(50, 50));
+        right_long.setBorder(BorderFactory.createEmptyBorder());
+        right_long.setContentAreaFilled(false);
+        right_long.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                right_longActionPerformed(evt);
+            }
+        });
+
+        left_book.setIcon(new javax.swing.ImageIcon(getClass().getResource("/next_2.png"))); // NOI18N
+        left_book.setPreferredSize(new java.awt.Dimension(50, 50));
+        left_book.setBorder(BorderFactory.createEmptyBorder());
+        left_book.setContentAreaFilled(false);
+        if(k==0){
+            left_book.setVisible(false);
+        }
+        left_book.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                left_bookActionPerformed(evt);
+            }
+        });
+
+        left_compact.setIcon(new javax.swing.ImageIcon(getClass().getResource("/next_2.png"))); // NOI18N
+        left_compact.setPreferredSize(new java.awt.Dimension(50, 50));
+        left_compact.setBorder(BorderFactory.createEmptyBorder());
+        left_compact.setContentAreaFilled(false);
+        if(k==0){
+            left_compact.setVisible(false);
+        }
+        left_compact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                left_compactActionPerformed(evt);
+            }
+        });
+
+        left_dvd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/next_2.png"))); // NOI18N
+        left_dvd.setPreferredSize(new java.awt.Dimension(50, 50));
+        left_dvd.setBorder(BorderFactory.createEmptyBorder());
+        left_dvd.setContentAreaFilled(false);
+        if(k==0){
+            left_dvd.setVisible(false);
+        }
+        left_dvd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                left_dvdActionPerformed(evt);
+            }
+        });
+
+        left_long.setIcon(new javax.swing.ImageIcon(getClass().getResource("/next_2.png"))); // NOI18N
+        left_long.setPreferredSize(new java.awt.Dimension(50, 50));
+        left_long.setBorder(BorderFactory.createEmptyBorder());
+        left_long.setContentAreaFilled(false);
+        if(k==0){
+            left_long.setVisible(false);
+        }
+        left_long.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                left_longActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -493,20 +596,27 @@ PlaceHolder p1;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(image_page, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(name_shop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(585, 585, 585)
-                                    .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(nut_login, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(back_home_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(left_book, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(name_shop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(left_compact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(left_dvd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(left_long, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(back_home_buy, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nut_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(image_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(right_book, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(right_compact, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(nut_login, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nut_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(image_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(89, 89, 89))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -520,8 +630,12 @@ PlaceHolder p1;
                                 .addComponent(dvd_list, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                                 .addComponent(compact_list, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                                 .addComponent(book_list, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE))
-                            .addComponent(long_list, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(long_list, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(right_dvd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(right_long, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(60, 60, 60))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -533,40 +647,65 @@ PlaceHolder p1;
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(27, 27, 27)
-                                        .addComponent(back_home_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(13, 13, 13)
-                                        .addComponent(nut_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                        .addGap(90, 90, 90)
+                                        .addComponent(nut_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addContainerGap()
-                                        .addComponent(image_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(21, 21, 21)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(back_home_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(38, 38, 38))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(image_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(name_shop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(nut_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addGap(25, 25, 25)
-                        .addComponent(book, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(nut_buy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(book, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(left_book, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(right_book, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(7, 7, 7))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(300, 300, 300)
                         .addComponent(book_list, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(compact_disc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(compact_disc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(left_compact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(compact_list, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(compact_list, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(right_compact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(dvd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75)
-                        .addComponent(long_player, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(dvd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(left_dvd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(right_dvd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(75, 75, 75)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(long_player, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(left_long, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(81, 81, 81)
+                                .addComponent(right_long, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(dvd_list, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -627,6 +766,67 @@ PlaceHolder p1;
     private void book_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_book_1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_book_1ActionPerformed
+
+    private void right_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_right_bookActionPerformed
+        // TODO add your handling code here:
+        book_list.getHorizontalScrollBar().setValue(840);
+        right_book.setVisible(false);
+        left_book.setVisible(true);
+    }//GEN-LAST:event_right_bookActionPerformed
+
+    private void right_compactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_right_compactActionPerformed
+        // TODO add your handling code here:
+        compact_list.getHorizontalScrollBar().setValue(840);
+        right_compact.setVisible(false);
+        left_compact.setVisible(true);
+    }//GEN-LAST:event_right_compactActionPerformed
+
+    private void right_dvdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_right_dvdActionPerformed
+        // TODO add your handling code here:
+        dvd_list.getHorizontalScrollBar().setValue(840);
+        right_dvd.setVisible(false);
+        left_dvd.setVisible(true);
+    }//GEN-LAST:event_right_dvdActionPerformed
+
+    private void right_longActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_right_longActionPerformed
+        // TODO add your handling code here:
+        long_list.getHorizontalScrollBar().setValue(840);
+        right_long.setVisible(false);
+        left_long.setVisible(true);
+    }//GEN-LAST:event_right_longActionPerformed
+
+    private void left_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_left_bookActionPerformed
+        // TODO add your handling code here:
+        book_list.getHorizontalScrollBar().setValue(-840);
+        left_book.setVisible(false);
+        right_book.setVisible(true);
+        
+    }//GEN-LAST:event_left_bookActionPerformed
+
+    private void left_compactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_left_compactActionPerformed
+        // TODO add your handling code here:
+        compact_list.getHorizontalScrollBar().setValue(-840);
+        left_compact.setVisible(false);
+        right_compact.setVisible(true);
+    }//GEN-LAST:event_left_compactActionPerformed
+
+    private void left_dvdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_left_dvdActionPerformed
+        // TODO add your handling code here:
+        dvd_list.getHorizontalScrollBar().setValue(-840);
+        left_dvd.setVisible(false);
+        right_dvd.setVisible(true);
+    }//GEN-LAST:event_left_dvdActionPerformed
+
+    private void left_longActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_left_longActionPerformed
+        // TODO add your handling code here:
+        long_list.getHorizontalScrollBar().setValue(-840);
+        left_long.setVisible(false);
+        right_long.setVisible(true);
+    }//GEN-LAST:event_left_longActionPerformed
+
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -711,11 +911,19 @@ PlaceHolder p1;
     private javax.swing.JLabel image_login;
     private javax.swing.JLabel image_page;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton left_book;
+    private javax.swing.JButton left_compact;
+    private javax.swing.JButton left_dvd;
+    private javax.swing.JButton left_long;
     private javax.swing.JScrollPane long_list;
     private javax.swing.JLabel long_player;
     private javax.swing.JLabel name_shop;
     private javax.swing.JButton nut_buy;
     private javax.swing.JButton nut_login;
+    private javax.swing.JButton right_book;
+    private javax.swing.JButton right_compact;
+    private javax.swing.JButton right_dvd;
+    private javax.swing.JButton right_long;
     private javax.swing.JTextField search;
     // End of variables declaration//GEN-END:variables
 }

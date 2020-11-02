@@ -124,7 +124,7 @@ PlaceHolder p2;
             }
         });
 
-        sign_up.setText("Sign up");
+        sign_up.setText("Register");
         sign_up.setPreferredSize(new java.awt.Dimension(120, 35));
         sign_up.setBackground(Color.white);
         sign_up.addActionListener(new java.awt.event.ActionListener() {
