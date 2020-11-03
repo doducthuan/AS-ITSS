@@ -1123,6 +1123,9 @@ PlaceHolder p;
 
     private void button_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_loginActionPerformed
         // TODO add your handling code here:
+        login lo = new login();
+        lo.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_button_loginActionPerformed
 
     /**
