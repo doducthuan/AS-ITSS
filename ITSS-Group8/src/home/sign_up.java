@@ -262,7 +262,10 @@ PlaceHolder p2;
                     ps.setString(1, user);
                     ps.setString(2, pass);
                     ps.executeUpdate();
-                    JOptionPane.showMessageDialog(rootPane,"Đăng kí thành công ");                 
+                    JOptionPane.showMessageDialog(rootPane,"Đăng kí thành công "); 
+                    login lo = new login();
+                    this.setVisible(false);
+                    lo.setVisible(true);
                 }
                 demo=0;
             } catch (Exception e) {
