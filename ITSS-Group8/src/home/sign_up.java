@@ -90,6 +90,11 @@ PlaceHolder p2;
         name_signup.setPreferredSize(new java.awt.Dimension(300, 200));
 
         username_sign.setPreferredSize(new java.awt.Dimension(400, 50));
+        username_sign.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                username_signFocusGained(evt);
+            }
+        });
 
         //pass_sign.setText("Enter password");
         //pass_sign.setEchoChar('*');
@@ -225,7 +230,7 @@ PlaceHolder p2;
         // TODO add your handling code here:
         int demo=0;
         String user = username_sign.getText();
-       String pass = String.valueOf(pass_sign.getPassword());
+        String pass = String.valueOf(pass_sign.getPassword());
         String confi_pass1 = String.valueOf(confi_pass_sign.getPassword());
         if(user.equals("Admin")==true||user.equals("")==true|| user.equals("account@gmail.com")==true){
             JOptionPane.showMessageDialog(rootPane,"Tên đăng nhập không hợp lệ !","Warning",JOptionPane.WARNING_MESSAGE);
@@ -321,6 +326,11 @@ PlaceHolder p2;
             confi_pass_sign.setEchoChar((char)0);
         }
     }//GEN-LAST:event_confi_pass_signFocusLost
+
+    private void username_signFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_username_signFocusGained
+        // TODO add your handling code here:
+        username_sign.selectAll();
+    }//GEN-LAST:event_username_signFocusGained
 
     /**
      * @param args the command line arguments

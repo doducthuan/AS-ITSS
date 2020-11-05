@@ -130,6 +130,9 @@
           <Dimension value="[400, 50]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="username_signFocusGained"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="pass_sign">
       <Properties>

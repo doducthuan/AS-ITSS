@@ -881,6 +881,11 @@ PlaceHolder p;
         });
 
         search.setPreferredSize(new java.awt.Dimension(300, 35));
+        search.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                searchFocusGained(evt);
+            }
+        });
         search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchActionPerformed(evt);
@@ -1129,6 +1134,11 @@ PlaceHolder p;
         lo.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_button_loginActionPerformed
+
+    private void searchFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchFocusGained
+        // TODO add your handling code here:
+        search.selectAll();
+    }//GEN-LAST:event_searchFocusGained
 
     /**
      * @param args the command line arguments
