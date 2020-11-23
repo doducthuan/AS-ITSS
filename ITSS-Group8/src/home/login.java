@@ -21,25 +21,25 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.Document; 
-
+import home.home_buy;
+import java.awt.event.KeyEvent;
 /**
  *
  * @author apple
  */
 public class login extends javax.swing.JFrame {
 PlaceHolder p1;
+    public static int confirm_login = 0;
     /**
      * Creates new form login
      */
     public login() {
+        
         initComponents();
-        p1 = new PlaceHolder(username,"acount@gmail.com");
+        p1 = new PlaceHolder(username,"Account@gmail.com");
         p1 = new PlaceHolder(password,"Enter password");
         password.setEchoChar((char)0);
-        /*JFrame frame = this;
-        GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice device = graphics.getDefaultScreenDevice();
-        device.setFullScreenWindow(frame);*/
+        
     }
 
     /**
@@ -80,6 +80,11 @@ PlaceHolder p1;
 
         username.setPreferredSize(new java.awt.Dimension(400, 50));
         //username.setPlaceholder("All your base are belong to us!");
+        username.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                usernameKeyReleased(evt);
+            }
+        });
 
         password.setPreferredSize(new java.awt.Dimension(400, 50));
         password.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -93,6 +98,11 @@ PlaceHolder p1;
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
+            }
+        });
+        password.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                passwordKeyPressed(evt);
             }
         });
 
@@ -210,9 +220,11 @@ PlaceHolder p1;
                 ps.setString(2,password2);
                 ResultSet rs = ps.executeQuery();
                 if(rs.next()){
-                    test1 ifor = new test1();                 
+                    test1 ifor = new test1();
+                    //home.login.confirm_login = 1;
                     this.setVisible(false);
-                    ifor.setVisible(true);                                     
+                    ifor.setVisible(true); 
+                    //home.home_buy.button_login.setVisible(false);
                 }else{
                     JOptionPane.showMessageDialog(rootPane,"Tài khoản không tồn tại - Hãy đăng kí");
                 }
@@ -245,6 +257,55 @@ PlaceHolder p1;
         }
     }//GEN-LAST:event_passwordFocusLost
 
+    private void passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
+      // Enter was pressed. Your code goes here.
+      //loginActionPerformed(java.awt.event.ActionEvent evt);
+      String user2 = username.getText();
+        String password2 = String.valueOf(password.getPassword());
+        if(user2.equals("")||user2.equals("acount@gmail.com")){
+            JOptionPane.showMessageDialog(rootPane,"Tên đăng nhập không hợp lệ","Warning",JOptionPane.WARNING_MESSAGE);
+        }else if(password2.equals("")||password2.equals("Enter password")){
+            JOptionPane.showMessageDialog(rootPane,"Mật khẩu không hợp lệ","Warning",JOptionPane.WARNING_MESSAGE);
+        }else{
+            try{
+                
+                final String URL = "jdbc:mysql://localhost:8889/mysql_db";
+                final String username1 = "root";
+                final String password1 = "root";
+                Connection conn = DriverManager.getConnection(URL, username1, password1);
+                String sql = "SELECT *FROM account WHERE username=? AND password=?";
+                PreparedStatement ps = conn.prepareStatement(sql);
+                ps.setString(1,user2);
+                ps.setString(2,password2);
+                ResultSet rs = ps.executeQuery();
+                if(rs.next()){
+                    test1 ifor = new test1();
+                    //home.login.confirm_login = 1;
+                    this.setVisible(false);
+                    ifor.setVisible(true); 
+                    //home.home_buy.button_login.setVisible(false);
+                }else{
+                    JOptionPane.showMessageDialog(rootPane,"Tài khoản không tồn tại - Hãy đăng kí");
+                }
+                ps.close(); 
+                conn.close();
+            }catch(Exception e){
+                System.out.println(e);
+            }
+        }
+      
+   }
+    }//GEN-LAST:event_passwordKeyPressed
+
+    private void usernameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyReleased
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == evt.VK_ENTER){
+           password.requestFocus();
+        }
+    }//GEN-LAST:event_usernameKeyReleased
+
     /**
      * @param args the command line arguments
      */
@@ -273,6 +334,7 @@ PlaceHolder p1;
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new login().setVisible(true);
