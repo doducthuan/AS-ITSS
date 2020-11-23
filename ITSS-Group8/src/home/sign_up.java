@@ -241,9 +241,7 @@ PlaceHolder p2;
         this.setVisible(false);
         hom.setVisible(true);
     }//GEN-LAST:event_back_home_signActionPerformed
-
-    private void sign_upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sign_upActionPerformed
-        // TODO add your handling code here:
+    public void sign_2(){
         int demo=0;
         String user = username_sign.getText();
         String pass = String.valueOf(pass_sign.getPassword());
@@ -307,6 +305,10 @@ PlaceHolder p2;
                   }
             }                                                           
         }
+    }
+    private void sign_upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sign_upActionPerformed
+
+        sign_2();
     }//GEN-LAST:event_sign_upActionPerformed
 
     private void pass_signFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pass_signFocusGained
@@ -351,70 +353,8 @@ PlaceHolder p2;
     private void confi_pass_signKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_confi_pass_signKeyPressed
         // TODO add your handling code here:
         if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
-      // Enter was pressed. Your code goes here.
-      int demo=0;
-        String user = username_sign.getText();
-        String pass = String.valueOf(pass_sign.getPassword());
-        String confi_pass1 = String.valueOf(confi_pass_sign.getPassword());
-        if(user.equals("Admin")==true||user.equals("")==true|| user.equals("account@gmail.com")==true){
-            JOptionPane.showMessageDialog(rootPane,"Tên đăng nhập không hợp lệ !","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(pass.equals("")==true|| pass.equals("Enter password")==true){           
-            JOptionPane.showMessageDialog(rootPane,"Bạn chưa nhập mật khẩu !","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(confi_pass1.equals("Confirm password")==true||confi_pass1.equals("")==true){
-            JOptionPane.showMessageDialog(rootPane,"Bạn chưa xác nhận mật khẩu!","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(pass.equals(confi_pass1)==false){
-            JOptionPane.showMessageDialog(rootPane,"Xác nhận mật khẩu sai !","Warning",JOptionPane.WARNING_MESSAGE);
-        }else{          
-            Connection conn = null;
-            Statement st = null;
-            ResultSet rs = null;
-            PreparedStatement ps = null;
-            try {
-                String dbURL = "jdbc:mysql://localhost:8889/mysql_db";
-                String username = "root";
-                String password = "root";
-                conn = DriverManager.getConnection(dbURL, username, password);             
-                String sql = "select * from account ";              
-                st = (Statement) conn.createStatement();
-                // Thực thi
-                rs = st.executeQuery(sql);
-                while (rs.next()) {                   
-                    if(user.equals(rs.getString("username"))==true){
-                        demo=1;
-                    }                   
-                }
-                if(demo==1){
-                    JOptionPane.showMessageDialog(rootPane,"Tài khoản đã tồn tại","Warning",JOptionPane.WARNING_MESSAGE);
-                }else if(demo==0){          
-                    String sql3 = "INSERT INTO account VALUES (?,?)";                   
-                    ps = (PreparedStatement) conn.prepareStatement(sql3);
-                    ps.setString(1, user);
-                    ps.setString(2, pass);
-                    ps.executeUpdate();
-                    JOptionPane.showMessageDialog(rootPane,"Đăng kí thành công "); 
-                    login lo = new login();
-                    this.setVisible(false);
-                    lo.setVisible(true);
-                }
-                demo=0;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }finally {
-                try {
-                    if (conn != null) {
-                        conn.close();
-                    }
-                    if (st != null) {
-                        st.close();
-                    }
-                    if (rs != null) {
-                        rs.close();
-                    }
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                  }
-            }                                                           
-        }
+      
+      sign_2();
       
    }
         

@@ -198,9 +198,7 @@ PlaceHolder p1;
         this.setVisible(false);
         sign.setVisible(true);
     }//GEN-LAST:event_sign_upActionPerformed
-
-    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // TODO add your handling code here:
+    public void login_2(){
         String user2 = username.getText();
         String password2 = String.valueOf(password.getPassword());
         if(user2.equals("")||user2.equals("acount@gmail.com")){
@@ -234,6 +232,10 @@ PlaceHolder p1;
                 System.out.println(e);
             }
         }
+    }
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
+
+        login_2();
     }//GEN-LAST:event_loginActionPerformed
 
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
@@ -260,43 +262,8 @@ PlaceHolder p1;
     private void passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyPressed
         // TODO add your handling code here:
         if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
-      // Enter was pressed. Your code goes here.
-      //loginActionPerformed(java.awt.event.ActionEvent evt);
-      String user2 = username.getText();
-        String password2 = String.valueOf(password.getPassword());
-        if(user2.equals("")||user2.equals("acount@gmail.com")){
-            JOptionPane.showMessageDialog(rootPane,"Tên đăng nhập không hợp lệ","Warning",JOptionPane.WARNING_MESSAGE);
-        }else if(password2.equals("")||password2.equals("Enter password")){
-            JOptionPane.showMessageDialog(rootPane,"Mật khẩu không hợp lệ","Warning",JOptionPane.WARNING_MESSAGE);
-        }else{
-            try{
-                
-                final String URL = "jdbc:mysql://localhost:8889/mysql_db";
-                final String username1 = "root";
-                final String password1 = "root";
-                Connection conn = DriverManager.getConnection(URL, username1, password1);
-                String sql = "SELECT *FROM account WHERE username=? AND password=?";
-                PreparedStatement ps = conn.prepareStatement(sql);
-                ps.setString(1,user2);
-                ps.setString(2,password2);
-                ResultSet rs = ps.executeQuery();
-                if(rs.next()){
-                    test1 ifor = new test1();
-                    //home.login.confirm_login = 1;
-                    this.setVisible(false);
-                    ifor.setVisible(true); 
-                    //home.home_buy.button_login.setVisible(false);
-                }else{
-                    JOptionPane.showMessageDialog(rootPane,"Tài khoản không tồn tại - Hãy đăng kí");
-                }
-                ps.close(); 
-                conn.close();
-            }catch(Exception e){
-                System.out.println(e);
-            }
+           login_2();
         }
-      
-   }
     }//GEN-LAST:event_passwordKeyPressed
 
     private void usernameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyReleased
